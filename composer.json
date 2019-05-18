@@ -1,0 +1,26 @@
+{
+    "name": "wueww-admin/login",
+    "description": "Login Handler Fn for WueWW Admin",
+    "type": "project",
+    "require": {
+        "topic-advisor/php-lambda-runtime-api": "^0.2.0",
+        "ext-json": "*",
+        "doctrine/dbal": "^2.9",
+        "firebase/php-jwt": "^5.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.11.6"
+    },
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Stefan Siegl",
+            "email": "stesie@brokenpipe.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
