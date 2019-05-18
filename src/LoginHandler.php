@@ -64,7 +64,9 @@ class LoginHandler implements InvocationRequestHandlerInterface
 
         $body = \json_decode($request->getBody());
 
-        if (!\is_object($body) || !\is_string($body->username) || !\is_string($body->password)) {
+        if (!\is_object($body)
+            || !isset($body->username) || !\is_string($body->username)
+            || !isset($body->password) || !\is_string($body->password)) {
             $response->setStatusCode(400);
             return $response;
         }
