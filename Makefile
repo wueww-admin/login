@@ -9,7 +9,7 @@ upload:
 		mkdir upload.tmp && \
 		cp -R bootstrap composer.* src upload.tmp/ && \
 		tm deploy service $(SERVICE_NAME) -n $(NAMESPACE) -f upload.tmp --build-template $(BUILD_TEMPLATE) \
-			--env EVENT=API_GATEWAY $(EXTRA_ENV) --annotation autoscaling.knative.dev/minScale=1 --wait && \
+			--env EVENT=API_GATEWAY $(EXTRA_ENV) --annotation autoscaling.knative.dev/minScale=1 --annotation wueww-admin.metafnord.de/noAuthN=1 --wait && \
 		rm -rf upload.tmp
 
 phpstan:
