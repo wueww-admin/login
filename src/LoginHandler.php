@@ -87,6 +87,7 @@ class LoginHandler implements InvocationRequestHandlerInterface
             'aud' => 'wueww-admin.metafnord.de',
             'iss' => 'wueww-admin.metafnord.de',
             'sub' => $row['id'],
+            'email' => $row['email'],
             'role' => $row['role'],
             'iat' => \time(),
             'nbf' => \time(),
